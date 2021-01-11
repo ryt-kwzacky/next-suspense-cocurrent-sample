@@ -29,16 +29,16 @@ const MemberList = ({ orgCode }) => {
 };
 
 const List = () => {
-  const [isFront, setIsFront] = useState(false);
+  const [isCSR, setIsCSR] = useState(false);
   useEffect(() => {
     process.nextTick(() => {
       if (globalThis.window ?? false) {
-        setIsFront(true);
+        setIsCSR(true);
       }
     });
   }, []);
 
-  if (!isFront) return null;
+  if (!isCSR) return null;
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
