@@ -1,5 +1,5 @@
 import { FC, useState, useEffect, useMemo } from 'react';
-import GuardLazyComponentToSSR from './guardLazyComponentToSSR';
+import List from './list';
 
 export type User = {
   id: number;
@@ -52,7 +52,7 @@ const App: FC = () => {
   return (
     <>
       <h1>Hello Suspense</h1>
-      <GuardLazyComponentToSSR />
+      <List />
       <p>count: {count}</p>
       <button type="button" onClick={increment}>
         increment
